@@ -2,31 +2,31 @@
 
 while True:
     try:
-        income = int(input("What is your monthly income: $"))
+        income = float(input("What is your monthly income: $"))
         break
     except:
         print("That isn't an integer")
 while True:
     try:
-        rent = int(input("What is your monthly rent/mortgage: $"))
+        rent = float(input("What is your monthly rent/mortgage: $"))
         break
     except:
         print("That isn't an integer")
 while True:
     try:
-        utility = int(input("What is your monthly utilities: $"))
+        utility = float(input("What is your monthly utilities: $"))
         break
     except:
         print("That isn't an integer")
 while True:
     try:
-        grocery = int(input("What is your monthly groceries: $"))
+        grocery = float(input("What is your monthly groceries: $"))
         break
     except:
         print("That isn't an integer")
 while True:
     try:
-        transportation = int(input("What is your monthly transportation: $"))
+        transportation = float(input("What is your monthly transportation: $"))
         break
     except:
         print("That isn't a integer")

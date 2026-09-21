@@ -8,11 +8,9 @@ while True:
   else:
     break
 while True:
-  place = input('Tell me a place:\n').strip().capitalize()
+  place = input('Tell me a place:\n').strip().title()
   if place.isnumeric():
     print("That is a number")
-  elif " " in place:
-    print("Only one place")
   else:
     break
 while True:
@@ -20,15 +18,13 @@ while True:
   if color.isnumeric():
     print("That is a number")
   elif " " in color:
-    print("Only one color")
+    print("Only one word colors")
   else:
     break
 while True:
   vehicle = input('Tell me a transportation vehicle:\n').strip().capitalize()
   if vehicle.isnumeric():
     print("That is a number")
-  elif " " in vehicle:
-    print("Only one vehicle")
   else:
     break
 while True:

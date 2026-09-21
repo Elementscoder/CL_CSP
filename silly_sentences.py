@@ -1,6 +1,6 @@
 # CL, 7, Silly Sentences
 while True:
-  verb = input('Tell me a verb ending in "ing":\n').strip().capitalize()
+  verb = input('Tell me a verb ending in "ing":\n').strip().lower()
   if verb.isnumeric():
     print("That is a number")
   elif " " in verb:
@@ -14,7 +14,7 @@ while True:
   else:
     break
 while True:
-  color = input('Tell me a color:\n').strip().capitalize()
+  color = input('Tell me a color:\n').strip().lower()
   if color.isnumeric():
     print("That is a number")
   elif " " in color:
@@ -22,13 +22,13 @@ while True:
   else:
     break
 while True:
-  vehicle = input('Tell me a transportation vehicle:\n').strip().capitalize()
+  vehicle = input('Tell me a transportation vehicle:\n').strip().lower()
   if vehicle.isnumeric():
     print("That is a number")
   else:
     break
 while True:
-  emotion = input('Tell me an emotion:\n').strip().capitalize()
+  emotion = input('Tell me an emotion:\n').strip().lower()
   if emotion.isnumeric():
     print("That is a number")
   elif " " in emotion:
@@ -36,7 +36,7 @@ while True:
   else:
     break
 while True:
-  animal = input('Tell me a animal:\n').strip().capitalize()
+  animal = input('Tell me a animal:\n').strip().lower()
   if animal.isnumeric():
     print("That is a number")
   elif " " in animal:
@@ -44,4 +44,4 @@ while True:
   else:
     break
 
-print(f"I was going to be late for my {verb} job in {place} when my {color} {vehicle} got destroyed by a {emotion} {animal}")
+print("The bus was going in the wrong direction for my"+" "+verb+" "+"compitition in"+" "+place+" "+"and I couldn't drive myself because my"+" "+color+" "+vehicle+" "+"got destroyed by a"+" "+emotion+" "+animal)

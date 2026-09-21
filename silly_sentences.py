@@ -44,4 +44,4 @@ while True:
   else:
     break
 
-print("The bus was going in the wrong direction for my"+" "+verb+" "+"compitition in"+" "+place+" "+"and I couldn't drive myself because my"+" "+color+" "+vehicle+" "+"got destroyed by a"+" "+emotion+" "+animal)
+print("The bus was going in the wrong direction for my"+" "+verb+" "+"compitition in"+" "+place+" "+"and I couldn't drive myself because my"+" "+color+" "+vehicle+" "+"got destroyed by a"+" "+emotion+" "+animal+".")

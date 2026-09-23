@@ -30,31 +30,42 @@ print(f"Has a number: {number}")
 print(f"Has a symbol: {symbol}")
 
 if length == True:
-    point = point+1
+    points = points+1
 else:
-    point = point+0
+    points = points+0
 if upcase == True:
-    point = point+1
+    points = points+1
 else:
-    point = point+0
+    points = points+0
 if lowcase == True:
-    point = point+1
+    points = points+1
 else:
-    point = point+0
+    points = points+0
 if number == True:
-    point = point+1
+    points = points+1
 else:
-    point = point+0
+    points = points+0
 if symbol == True:
-    point = point+1
+    points = points+1
 else:
-    point = point+0
+    points = points+0
 while True:
-    if point == 5:
-        print(f"Your password strength is strong")
-    elif point == 3 or 4:
-        print(f"Your password strength is medium")
+    if points == 5:
+        print("Your password strength is strong.")
+    elif points == 3 or points == 4:
+        print("Your password strength is medium.")
     else:
-        print(f"Your password strength is weak")
-break
+        print("Your password strength is weak.")
+    break
+if length == False:
+    need_8 = "at least eight characters"
+if upcase == False:
+    need_up = "an uppercase letter"
+if lowcase == False:
+    need_low = "an lowercase letter"
+if number == False:
+    need_number = "a number"
+if symbol == False:
+    need_symbol = "a symbol"
 
+print("to make your password strong you need "+need_8+", "+need_up+", "+need_low+", "+need_number+", and"+need_symbol+".")

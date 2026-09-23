@@ -7,6 +7,7 @@ lowcase = False
 number = False
 symbol = False
 points = 0
+feedback = "To make it strong add: "
 
 if len(password) >= 8:
     length = True
@@ -32,23 +33,28 @@ print(f"Has a symbol: {symbol}")
 if length == True:
     points = points+1
 else:
-    points = points+0
+    feedback = feedback+"at least eight characters, "
 if upcase == True:
     points = points+1
 else:
-    points = points+0
+    feedback = feedback+"an uppercased letter, "
 if lowcase == True:
     points = points+1
 else:
-    points = points+0
+    feedback = feedback+"an lowercased letter, "
 if number == True:
     points = points+1
 else:
-    points = points+0
+    feedback = feedback+"a number, "
 if symbol == True:
-    points = points+1
+        points = points+1
 else:
-    points = points+0
+    feedback = feedback+"a symbol."
+if length == True and upcase == True and lowcase == True and number == True and symbol == True:
+    feedback = feedback+"nothing"
+else:
+    feedback = feedback+""
+
 while True:
     if points == 5:
         print("Your password strength is strong.")
@@ -57,15 +63,5 @@ while True:
     else:
         print("Your password strength is weak.")
     break
-if length == False:
-    need_8 = "at least eight characters"
-if upcase == False:
-    need_up = "an uppercase letter"
-if lowcase == False:
-    need_low = "an lowercase letter"
-if number == False:
-    need_number = "a number"
-if symbol == False:
-    need_symbol = "a symbol"
 
-print("to make your password strong you need "+need_8+", "+need_up+", "+need_low+", "+need_number+", and"+need_symbol+".")
+print(feedback)

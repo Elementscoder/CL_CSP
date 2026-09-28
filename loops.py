@@ -1,11 +1,14 @@
 # Cl, Loops Notes
 import random
 # code that will repeat over and over again
-count = 1
+count = 0
 
-while count <=10:
+while count <=20:
     print(count)
-    count += 1
+    count += 2
+
+for number in range(0,21,2):
+    print(number)
 
 goose = random.randint(1,11)
 ducks = 1

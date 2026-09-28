@@ -20,6 +20,6 @@ while guesses <=6:
         break
     guesses += 1
 if guesses <= 6:
-    print(f"Congratulations! You guessed it {guesses} tries, Good Job!")
+    print(f"Congratulations! You guessed it in {guesses} tries, Good Job!")
 else:
     print(f"You're out of guesses! The number was {number}.")

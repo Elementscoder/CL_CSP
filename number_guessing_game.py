@@ -1,3 +1,5 @@
+# CL, Number Guessing Game
+
 import random
 
 print("I'm thinking of a integer between 1 and 100. You have 6 tries to guess it!")

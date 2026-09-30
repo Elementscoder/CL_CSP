@@ -28,3 +28,12 @@ print(f"Your transportation is ${transportation} which is {calc_percent(transpor
 print(f"Your groceries is ${groceries} which is {calc_percent(groceries, income)}% of your income")
 print(f"You should save ${save} which is 10% of your income")
 print(f"That means you saved {income-rent-utilities-transportation-groceries-save} left to spend.")
+
+lower_start = "a"
+number = ord(lower_start)
+lower_end = "z"
+
+number += int(input("Enter a shift amount:\n"))
+print(f"The letter {lower_start} is the number {ord(lower_start)}")
+print(f"The letter {chr(number)} is the number {number}")
+print(f"The letter {lower_end} is the number {ord(lower_end)}")

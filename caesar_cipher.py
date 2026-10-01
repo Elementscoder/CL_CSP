@@ -21,8 +21,13 @@ while True:
     if crypt == "E":
         if shift < 0:
             shift = 0-shift
+        else:
+            shift + 0
     elif crypt == "D":
-        shift = 0-shift
+        if shift > 0:
+            shift = 0-shift
+        else:
+            shift + 0
     else:
         print('You need to type "E" or "D" for (E)ncrypt and (D)ecrypt')
     break
@@ -30,7 +35,7 @@ while True:
 def encrypt(message, shift):
     word = ""
     for letter in message:
-        if letter.isalpha:
+        if letter.isalpha():
             letter = ord(letter) + shift
             if letter > 122:
                 letter = letter - 26

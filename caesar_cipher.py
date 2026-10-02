@@ -43,7 +43,9 @@ def encrypt(message, shift):
             elif uppercase and letter < 65 and shift < 0:
                 letter = letter + 26
             letter = chr(letter)
-            word = word+letter
+            word = word + letter
+        else:
+            word = word + letter
     return word
 
 print(encrypt(message, shift))

@@ -13,62 +13,55 @@ with open('hangman.txt', "r") as file:
 
 def hangman(wrong_guesses):
     if wrong_guesses == 0:
-        print("""
-                 ______
-                 |    |
-                 |
-                 |
-                 |
-                 |_______""")
+        print(f"""______
+             |    |  wrong guesses: {wrong_guesses}
+             |
+             |
+             |
+             |_______""")
     elif wrong_guesses == 1:
-        print("""
-                 ______
-                 |    |
-                 |    O
-                 |
-                 |
-                 |_______""")
+        print(f"""______
+             |    |  wrong guesses: {wrong_guesses}
+             |    O
+             |
+             |
+             |_______""")
     elif wrong_guesses == 2:
-        print("""
-                 ______
-                 |    |
-                 |    O
-                 |    |
-                 |
-                 |_______""")
+        print(f"""______
+             |    |  wrong guesses: {wrong_guesses}
+             |    O
+             |    |
+             |
+             |_______""")
     elif wrong_guesses == 3:
-        print("""
-                 ______
-                 |    |
-                 |    O
-                 |   /|
-                 |
-                 |_______""")
+        print(f"""______
+             |    |  wrong guesses: {wrong_guesses}
+             |    O
+             |   /|
+             |
+             |_______""")
     elif wrong_guesses == 4:
-        print("""
-                 ______
-                 |    |
-                 |    O
-                 |   /|\\
-                 |
-                 |_______""")
+        print(f"""______
+             |    |  wrong guesses: {wrong_guesses}
+             |    O
+             |   /|\\
+             |
+             |_______""")
     elif wrong_guesses == 5:
-        print("""
-                 ______
-                 |    |
-                 |    O
-                 |   /|\\
-                 |   /
-                 |_______""")
+        print(f"""______
+             |    |  wrong guesses: {wrong_guesses}
+             |    O
+             |   /|\\
+             |   /
+             |_______""")
     else:
         if wrong_guesses == 6:
-            print("""
-                     ______
-                     |    |
-                     |    O
-                     |   /|\\
-                     |   / \\
-                     |_______""")
+            print(f"""______
+                 |    | wrong guesses: {wrong_guesses}
+                 |    O
+                 |   /|\\
+                 |   / \\
+                 |_______""")
     return hangman
 
 def display_word(word):
@@ -79,7 +72,7 @@ def display_word(word):
             break
         else:
             if length != 0:
-                letter_word = letter_word + "_"
+                letter_word = letter_word + "_ "
                 length -= 1
                 continue  
     for letter in word:

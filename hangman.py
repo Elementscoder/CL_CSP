@@ -92,5 +92,14 @@ def display_word(word):
 while True:
     hangman(wrong_guesses)
     print(display_word(word))
-    guess = input(f"Enter guess #{guesses} letter guess:\n")
-    
+
+    while True:
+        guess = input(f"Enter guess #{guesses} letter guess:\n").lower()
+        if guess.isalpha():
+            break
+        else:
+            if len(guess) > 1:
+                print("Please type only one character.")
+                continue
+            else:
+                continue

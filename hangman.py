@@ -6,8 +6,12 @@ word = ""
 guesses = 1
 wrong_guesses = 0
 guessed = []
-win = 0
-loses = 0
+
+with open('hangman_win_loss.txt', "r") as file:
+    content = file.read()
+    scores = content.split(",")
+    wins = int(scores[0])
+    loses = int(scores[1])
 
 with open('hangman.txt', "r") as file:
     content = file.read()
@@ -78,19 +82,43 @@ def display_word(word, guessed):
 while True:
     hangman(wrong_guesses)
     print(display_word(word, guessed))
-    guess = input(f"Enter guess #{guesses} letter guess:\n").lower()
-    guessed = guessed + guess
-    for letter in word:
-        if letter != guess:
+
+    while True:
+        guess = input(f"Enter guess:\n").lower()
+        if guess.isalpha() and len(guess) == 1:
+            break
+        else:
+            print("Please type only one alpabetical character.")
+            continue
+    
+    guessed.append(guess)
+    if guess not in word:
             wrong_guesses += 1
-    if display_word == word and wrong_guesses <= 6:
+    if display_word(word, guessed) == word and wrong_guesses <= 6:
         print("You won!")
-        win += 1
-        play = input("Do you want to play again:\n")
-        if play == "yes" or "Yes":
+        wins += 1
+        play = input("Do you want to play again:\n").lower()
+        if play == "yes":
             wrong_guesses = 0
             word = random.choice(words)
+        else:
+            print(f"Okay you have {wins} wins and {loses} loses.\nData has been reset.")
+            wins = 0
+            loses = 0
+            wrong_guesses = 7
     else:
-        print("You lose!")
-        print(f"The word was {word}")
-        loses += 1
+        if wrong_guesses > 6:
+            print("You lose!")
+            print(f"The word was {word}")
+            loses += 1
+            play = input("Do you want to play again:\n").lower()
+            if play == "yes":
+                wrong_guesses = 0
+                word = random.choice(words)
+            else:
+                print(f"Okay you have {wins} wins and {loses} loses.\nData has been reset.")
+                wins = 0
+                loses = 0
+                wrong_guesses = 7
+        else:
+            continue

@@ -1,1 +1,1 @@
-blue, apple, banana, blanket, elephant, alligator, journalism, electricity, encyclopedia, justification
+blue,apple,banana,blanket,elephant,alligator,journalism,electricity,encyclopedia,justification

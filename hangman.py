@@ -97,28 +97,42 @@ while True:
     if display_word(word, guessed) == word and wrong_guesses <= 6:
         print("You won!")
         wins += 1
+        with open('hangman_win_loss.txt', "r+") as score:
+            score.write(f"{wins},{loses}")
         play = input("Do you want to play again:\n").lower()
         if play == "yes":
             wrong_guesses = 0
             word = random.choice(words)
+            guessed = []
         else:
-            print(f"Okay you have {wins} wins and {loses} loses.\nData has been reset.")
+            print(f"Okay you had {wins} wins and {loses} loses.\nData has been reset.")
             wins = 0
             loses = 0
-            wrong_guesses = 7
+            wrong_guesses = 0
+            word = random.choice(words)
+            guessed = []
+            with open('hangman_win_loss.txt', "r+") as score:
+                score.write(f"{wins},{loses}")
     else:
         if wrong_guesses > 6:
             print("You lose!")
             print(f"The word was {word}")
             loses += 1
+            with open('hangman_win_loss.txt', "r+") as score:
+                score.write(f"{wins},{loses}")
             play = input("Do you want to play again:\n").lower()
             if play == "yes":
                 wrong_guesses = 0
                 word = random.choice(words)
+                guessed = []
             else:
-                print(f"Okay you have {wins} wins and {loses} loses.\nData has been reset.")
+                print(f"Okay you had {wins} wins and {loses} loses.\nData has been reset.")
                 wins = 0
                 loses = 0
-                wrong_guesses = 7
+                wrong_guesses = 0
+                word = random.choice(words)
+                guessed = []
+                with open('hangman_win_loss.txt', "r+") as score:
+                    score.write(f"{wins},{loses}")
         else:
             continue
